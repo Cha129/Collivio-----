@@ -1,0 +1,8 @@
+{
+  "name": "Collivio",
+  "description": "A global platform for ambitious students aged 13–19 to find micro-internships, research collaborations, and build trusted portfolios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

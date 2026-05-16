@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile information stored in Firestore.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "fullName": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "business", "mentor", "admin"] },
+        "orgName": { "type": "string" },
+        "emailVerified": { "type": "boolean" },
+        "accountStatus": { "type": "string", "enum": ["active", "suspended", "pending"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "lastLogin": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "fullName", "createdAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User profiles keyed by Firebase Auth UID."
+    }
+  }
+}
